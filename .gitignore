@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Secrets (NEVER COMMIT)
+gcp_key.json
+.env
+.env.*
+secrets/
+
+# dbt
+dbt_libya/profiles.yml
+dbt_libya/target/
+dbt_libya/logs/
+dbt_libya/dbt_packages/
+
+# macOS
+.DS_Store
