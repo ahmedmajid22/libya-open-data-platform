@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/dat
 
 ---
 
-## 🧱 Stack
+##  Stack
 
 - **Ingestion:** Python + World Bank API  
 - **Warehouse:** Google BigQuery  
