@@ -55,7 +55,7 @@ def export_mart_to_csv() -> None:
     logger.info(f"Querying: {table_ref}")
 
     try:
-        df = client.query(query).to_dataframe()
+        df = client.query(query).to_dataframe(create_bqstorage_client=False)
     except Exception as e:
         logger.error(f"Failed to query mart table: {e}")
         logger.error("Make sure dbt models have been built first (dbt run)")
