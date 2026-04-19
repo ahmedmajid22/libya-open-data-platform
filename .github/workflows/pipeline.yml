@@ -10,6 +10,9 @@ jobs:
     name: Run Full Data Pipeline
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     concurrency:
       group: ${{ github.workflow }}
       cancel-in-progress: false
