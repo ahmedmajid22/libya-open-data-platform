@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Raw layer — unmodified data as loaded from external sources.
+      Every table in this layer has a 'source' and 'ingested_at' column
+      for data lineage tracking.
+    database: "libya-open-data"  # fixed database name
+    schema: raw
+    tables:
+      - name: raw_worldbank
+        description: >
+          World Bank Open Data for Libya (LY).
+          Indicators: population, GDP, GDP per capita, unemployment, inflation.
+          Year range: 2000–2023.
+          Ingested weekly via Python extract_worldbank.py.
+        columns:
+          - name: year
+            description: Reference year (integer, e.g. 2020)
+          - name: population_total
+            description: Total population of Libya (World Bank SP.POP.TOTL)
+          - name: gdp_usd
+            description: GDP in current US dollars (World Bank NY.GDP.MKTP.CD)
+          - name: gdp_per_capita_usd
+            description: GDP per capita in current US dollars (World Bank NY.GDP.PCAP.CD)
+          - name: unemployment_rate
+            description: Unemployment as % of total labor force (World Bank SL.UEM.TOTL.ZS)
+          - name: inflation_rate
+            description: Consumer price inflation, annual % (World Bank FP.CPI.TOTL.ZG)
+          - name: country_code
+            description: ISO 3166-1 alpha-2 country code (always 'LY')
+          - name: country_name
+            description: Country name (always 'Libya')
+          - name: source
+            description: Data source identifier (always 'world_bank')
+          - name: ingested_at
+            description: UTC timestamp when this row was loaded into BigQuery

@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: fact_libya_yearly_metrics
+    description: >
+      Libya Open Data Platform — primary analytics fact table.
+      One row per year (2000–2023). All metrics in one place.
+
+      Data sources:
+        - World Bank API (population, GDP, unemployment, inflation)
+        - UNHCR (refugees, asylum seekers) — Phase 2, currently null
+
+      Grain: One row per calendar year.
+
+      Usage:
+        - Looker Studio dashboard (direct BigQuery connection)
+        - Public CSV download (exported weekly to /data folder)
+        - Future REST API
+
+    columns:
+      - name: year
+        description: Reference year (2000–2023). Primary key of this table.
+        tests:
+          - not_null
+          - unique
+
+      - name: population_total
+        description: >
+          Total population of Libya.
+          Source: World Bank. May be null for years with no estimate.
+
+      - name: gdp_usd
+        description: >
+          GDP in current US dollars.
+          Source: World Bank. Null for years with no economic reporting.
+
+      - name: gdp_per_capita_usd
+        description: >
+          GDP per capita in current US dollars.
+          Source: World Bank.
+
+      - name: unemployment_rate
+        description: >
+          Unemployment as % of total labor force.
+          Source: World Bank.
+
+      - name: inflation_rate
+        description: >
+          Consumer price inflation, annual %.
+          Source: World Bank.
+
+      - name: refugees_from_libya
+        description: >
+          Number of people who fled Libya and were registered as refugees.
+          Source: UNHCR. Phase 2 — currently null.
+
+      - name: asylum_seekers_count
+        description: >
+          Number of asylum seekers from Libya.
+          Source: UNHCR. Phase 2 — currently null.
+
+      - name: gdp_per_person_calculated
+        description: >
+          Derived metric: GDP in USD divided by total population.
+          Calculated as ROUND(gdp_usd / population_total, 2).
+          Compare to gdp_per_capita_usd (World Bank official figure).
+
+      - name: population_yoy_change
+        description: >
+          Year-over-year change in population (current year minus previous year).
+          Null for year 2000 (no prior year in dataset).
+
+      - name: gdp_yoy_change_usd
+        description: >
+          Year-over-year change in GDP in USD.
+          Null for year 2000.
+
+      - name: conflict_period_note
+        description: >
+          Contextual label for conflict years.
+          Values: 'Revolution (2011 civil war)', 'Second civil war period', or null.
+          Useful for dashboard annotations.
+
+      - name: wb_source
+        description: Source identifier for World Bank data rows.
+
+      - name: wb_ingested_at
+        description: UTC timestamp of last ingestion for this year's World Bank data.
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [year]

@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: stg_worldbank
+    description: >
+      Cleaned and typed World Bank data for Libya.
+      One row per year, covering 2000–2023.
+      Nulls are preserved where the World Bank reports no data
+      (common during conflict years: 2011, 2014–2016).
+      This model feeds directly into fact_libya_yearly_metrics.
+
+    columns:
+      - name: year
+        description: Reference year as integer (2000–2023)
+        tests:
+          - not_null
+          - unique
+          - dbt_utils.accepted_range:
+              min_value: 2000
+              max_value: 2023
+
+      - name: country_code
+        description: ISO country code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['LY']
+
+      - name: country_name
+        description: Country name
+        tests:
+          - not_null
+
+      - name: population_total
+        description: >
+          Total population of Libya.
+          Source: World Bank SP.POP.TOTL.
+          May be null for years with no World Bank estimate.
+
+      - name: gdp_usd
+        description: >
+          GDP in current US dollars.
+          Source: World Bank NY.GDP.MKTP.CD.
+          Will be null for years with no economic reporting (e.g. 2011).
+
+      - name: gdp_per_capita_usd
+        description: >
+          GDP per capita in current US dollars.
+          Source: World Bank NY.GDP.PCAP.CD.
+
+      - name: unemployment_rate
+        description: >
+          Unemployment as % of total labor force.
+          Source: World Bank SL.UEM.TOTL.ZS.
+
+      - name: inflation_rate
+        description: >
+          Consumer price inflation, annual %.
+          Source: World Bank FP.CPI.TOTL.ZG.
+
+      - name: source
+        description: Data source identifier
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['world_bank']
+
+      - name: ingested_at
+        description: UTC timestamp of when this data was loaded into the raw layer
+        tests:
+          - not_null

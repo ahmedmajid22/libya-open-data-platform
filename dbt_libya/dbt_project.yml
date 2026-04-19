@@ -1,0 +1,17 @@
+name: 'dbt_libya'
+version: '1.0.0'
+
+profile: 'weather_analytics'
+
+model-paths: ["models"]
+
+models:
+  dbt_libya:
+
+    staging:
+      +schema: staging
+      +materialized: view
+
+    mart:
+      +schema: mart
+      +materialized: table
