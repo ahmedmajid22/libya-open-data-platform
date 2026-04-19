@@ -1,0 +1,91 @@
+name: Libya Data Platform — Weekly Pipeline
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    name: Run Full Data Pipeline
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: false
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Write GCP service account credentials
+        run: echo '${{ secrets.GCP_KEY }}' > gcp_key.json
+
+      - name: Create environment file
+        run: |
+          cat > .env << EOF2
+          GOOGLE_APPLICATION_CREDENTIALS=gcp_key.json
+          GCP_PROJECT_ID=${{ secrets.GCP_PROJECT_ID }}
+          BQ_DATASET_RAW=raw
+          BQ_DATASET_STAGING=staging
+          BQ_DATASET_MART=mart
+          EOF2
+
+      - name: Run data ingestion
+        run: python -m ingestion.load_to_bigquery
+
+      - name: Install dbt BigQuery adapter
+        run: pip install dbt-bigquery
+
+      - name: Write dbt profiles.yml
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'EOF2'
+          ${{ secrets.DBT_PROFILES }}
+          EOF2
+
+      - name: Install dbt packages
+        run: |
+          cd dbt_libya
+          dbt deps
+
+      - name: Run dbt models
+        run: |
+          cd dbt_libya
+          dbt run --profiles-dir ~/.dbt
+
+      - name: Run dbt tests
+        run: |
+          cd dbt_libya
+          dbt test --profiles-dir ~/.dbt
+
+      - name: Export mart table to CSV
+        run: python -m ingestion.export_to_csv
+
+      - name: Commit and push updated CSV to GitHub
+        run: |
+          git config --global user.name "Libya Data Bot"
+          git config --global user.email "bot@libya-data-platform.com"
+          git add data/fact_libya_yearly_metrics.csv
+          git diff --staged --quiet || git commit -m "data: auto-update $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Clean up credentials
+        if: always()
+        run: |
+          rm -f gcp_key.json
+          rm -f .env
