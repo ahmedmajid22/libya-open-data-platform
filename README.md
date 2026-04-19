@@ -25,8 +25,16 @@ https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/dat
 
 ## Project Structure
 libya-open-data-platform/
-├── ingestion/          # Python scripts to extract and load data
-├── dbt_libya/          # dbt models, tests, and documentation
-├── data/               # Public CSV exports
-├── docs/               # Data dictionary and documentation
-└── .github/workflows/  # Automated pipeline
+├── .github/workflows/      # GitHub Actions pipeline
+├── data/                   # Public CSV exports (auto-updated weekly)
+├── dbt_libya/
+│   ├── models/
+│   │   ├── staging/        # stg_worldbank (view)
+│   │   └── mart/           # fact_libya_yearly_metrics (table)
+│   ├── tests/              # Custom data quality tests
+│   └── macros/             # dbt macros
+├── docs/                   # Data dictionary
+├── ingestion/              # Python extract + load scripts
+├── README.md
+├── DISCLAIMER.md
+└── LICENSE
