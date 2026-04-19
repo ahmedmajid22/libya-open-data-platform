@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 What This Does
+## What This Does
 
 - Extracts data from the **World Bank API** every Monday  
 - Transforms data using **dbt** (staging + mart layers)  
@@ -15,13 +15,13 @@
 
 ---
 
-## 📊 Data
+## Data
 
 The public dataset is available in the `/data` folder:
 
 - [fact_libya_yearly_metrics.csv](data/fact_libya_yearly_metrics.csv)
 
-**⬇️ Direct download URL:**  
+**Direct download URL:**  
 https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/data/fact_libya_yearly_metrics.csv
 
 ---
@@ -36,7 +36,7 @@ https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/dat
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```bash
 libya-open-data-platform/
@@ -57,7 +57,7 @@ libya-open-data-platform/
 
 ---
 
-## ⚙️ Pipeline Workflow
+## Pipeline Workflow
 
 1. **Extract** → Fetch data from World Bank API  
 2. **Load** → Store raw data in BigQuery  
@@ -69,7 +69,7 @@ libya-open-data-platform/
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 - Integrate **UNHCR datasets**  
 - Add **dashboards (Looker Studio / Power BI)**  
@@ -78,7 +78,7 @@ libya-open-data-platform/
 
 ---
 
-## 📜 License & Disclaimer
+## License & Disclaimer
 
 - See `LICENSE` for usage terms  
 - See `DISCLAIMER.md` for data limitations  
