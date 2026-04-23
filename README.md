@@ -1,16 +1,16 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=🇱🇾%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20·%20Tested%20·%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=%F0%9F%87%B1%F0%9F%87%BF%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20%C2%B7%20Tested%20%C2%B7%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=650&height=90&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=620&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
 
 <br/><br/>
 
-[![Pipeline](https://github.com/ahmedmajid22/libya-open-data-platform/actions/workflows/pipeline.yml/badge.svg?style=for-the-badge)](https://github.com/ahmedmajid22/libya-open-data-platform/actions)
+[![Pipeline](https://github.com/ahmedmajid22/libya-open-data-platform/actions/workflows/pipeline.yml/badge.svg)](https://github.com/ahmedmajid22/libya-open-data-platform/actions)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-22c55e?style=for-the-badge)](LICENSE)
-[![Data](https://img.shields.io/badge/Years-2000–2023-f59e0b?style=for-the-badge)](data/fact_libya_yearly_metrics.csv)
+[![Data](https://img.shields.io/badge/Years-2000%E2%80%932023-f59e0b?style=for-the-badge)](data/fact_libya_yearly_metrics.csv)
 [![Tests](https://img.shields.io/badge/Tests-13%2F13%20Passing-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white)](dbt_libya/models)
 
 <br/>
@@ -168,7 +168,7 @@ head(df)
 | `wb_source` | STRING | Metadata | Always `world_bank` |
 | `wb_ingested_at` | TIMESTAMP | Metadata | Last pipeline run timestamp |
 
-> *UNHCR columns reserved for Phase 2 — currently `null`
+> \*UNHCR columns reserved for Phase 2 — currently `null`
 
 > **On null values:** Nulls are real data gaps, not errors. The World Bank did not publish data for Libya during conflict years — particularly **2011** (revolution) and **2014–2016** (second civil war). Do not replace nulls with zero.
 
