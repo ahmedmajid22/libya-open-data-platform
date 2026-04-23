@@ -1,6 +1,7 @@
 <div align="center">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=🇱🇾%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20·%20Tested%20·%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 =======
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=600&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
@@ -13,6 +14,13 @@
 <br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=600&height=80&lines=World+Bank+API+→+BigQuery+→+dbt+→+GitHub;Every+Monday+at+06%3A00+UTC+·+Zero+manual+work;13%2F13+data+quality+tests+passing+✓" alt="Typing animation"/>
+=======
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=🇱🇾%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20·%20Tested%20·%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=650&height=90&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
+>>>>>>> dev
 
 <br/><br/>
 
