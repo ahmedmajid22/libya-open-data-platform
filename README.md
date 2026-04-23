@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/docs/flag.png" width="80" alt="Libya Flag" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=600&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
 
 # 🇱🇾 Libya Open Data Platform
 
