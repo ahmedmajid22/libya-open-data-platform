@@ -1,40 +1,16 @@
 <div align="center">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=🇱🇾%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20·%20Tested%20·%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
-=======
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=600&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
-
-# 🇱🇾 Libya Open Data Platform
-
-**An end-to-end automated data engineering pipeline — built to make Libya's data accessible to the world.**
->>>>>>> dev
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=Libya+Open+Data+Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated+%C2%B7+Tested+%C2%B7+Open+Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=600&height=80&lines=World+Bank+API+→+BigQuery+→+dbt+→+GitHub;Every+Monday+at+06%3A00+UTC+·+Zero+manual+work;13%2F13+data+quality+tests+passing+✓" alt="Typing animation"/>
-=======
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=🇱🇾%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20·%20Tested%20·%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=650&height=90&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
->>>>>>> dev
-=======
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=%F0%9F%87%B1%F0%9F%87%BF%20Libya%20Open%20Data%20Platform&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Automated%20%C2%B7%20Tested%20%C2%B7%20Open%20Source&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=620&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing+%E2%9C%93" alt="Typing animation"/>
->>>>>>> dev
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&multiline=true&width=620&height=80&lines=World+Bank+API+%E2%86%92+BigQuery+%E2%86%92+dbt+%E2%86%92+GitHub;Every+Monday+at+06%3A00+UTC+%C2%B7+Zero+manual+work;13%2F13+data+quality+tests+passing" alt="Typing animation"/>
 
 <br/><br/>
 
-[![Pipeline](https://github.com/ahmedmajid22/libya-open-data-platform/actions/workflows/pipeline.yml/badge.svg)](https://github.com/ahmedmajid22/libya-open-data-platform/actions)
+[![Pipeline](https://github.com/ahmedmajid22/libya-open-data-platform/actions/workflows/pipeline.yml/badge.svg?style=for-the-badge)](https://github.com/ahmedmajid22/libya-open-data-platform/actions)
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-22c55e?style=for-the-badge)](LICENSE)
-[![Data](https://img.shields.io/badge/Years-2000%E2%80%932023-f59e0b?style=for-the-badge)](data/fact_libya_yearly_metrics.csv)
+[![Data](https://img.shields.io/badge/Years-2000--2023-f59e0b?style=for-the-badge)](data/fact_libya_yearly_metrics.csv)
 [![Tests](https://img.shields.io/badge/Tests-13%2F13%20Passing-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white)](dbt_libya/models)
 
 <br/>
@@ -49,7 +25,7 @@
 
 ---
 
-## ◈ The Problem
+## 🇱🇾 The Problem
 
 > Open data about Libya is fragmented, inconsistent, and buried across international databases.
 > A researcher shouldn't need days to get a clean table of GDP and population figures.
@@ -87,8 +63,8 @@ This project solves that — once, permanently, automatically.
   ┌─────────────────────────────────────────────────────┐
   │  STEP 4 · TEST                                      │
   │  13 data quality checks run                         │
-  │  ✗ Any failure → pipeline stops. No bad data ships. │
-  │  ✓ All pass  → continue                             │
+  │  Any failure = pipeline stops. No bad data ships.   │
+  │  All pass = continue                                │
   └──────────────────────┬──────────────────────────────┘
                          │
                          ▼
@@ -107,9 +83,9 @@ This project solves that — once, permanently, automatically.
 
 | Layer | Dataset | Object | Type | Role |
 |:---:|:---:|:---:|:---:|:---|
-| 🥉 Raw | `raw` | `raw_worldbank` | **Table** | Unmodified source truth — never edited |
-| 🥈 Staging | `staging` | `stg_worldbank` | **View** | Cleaned, typed, filtered to LY 2000–2023 |
-| 🥇 Mart | `mart` | `fact_libya_yearly_metrics` | **Table** | Analytics-ready — feeds dashboard + CSV |
+| Raw | `raw` | `raw_worldbank` | **Table** | Unmodified source truth — never edited |
+| Staging | `staging` | `stg_worldbank` | **View** | Cleaned, typed, filtered to LY 2000–2023 |
+| Mart | `mart` | `fact_libya_yearly_metrics` | **Table** | Analytics-ready — feeds dashboard + CSV |
 
 </div>
 
@@ -139,7 +115,6 @@ df = pd.read_csv(
     "https://raw.githubusercontent.com/ahmedmajid22/libya-open-data-platform/main/data/fact_libya_yearly_metrics.csv"
 )
 
-# GDP in billions, population in millions
 df["gdp_billions"] = df["gdp_usd"] / 1e9
 df["population_millions"] = df["population_total"] / 1e6
 
@@ -233,8 +208,8 @@ libya-open-data-platform/
 │
 ├── 📂 ingestion/
 │   ├── extract_worldbank.py            ← Pulls 5 indicators from World Bank API
-│   ├── load_to_bigquery.py             ← Loads DataFrame → BigQuery raw layer
-│   ├── export_to_csv.py                ← Exports mart table → /data CSV
+│   ├── load_to_bigquery.py             ← Loads DataFrame into BigQuery raw layer
+│   ├── export_to_csv.py                ← Exports mart table to /data CSV
 │   └── utils.py                        ← BQ client, logger, env loader
 │
 ├── 📂 dbt_libya/
@@ -254,7 +229,7 @@ libya-open-data-platform/
 │   └── dbt_project.yml
 │
 ├── 📂 data/
-│   ├── fact_libya_yearly_metrics.csv  ← ✦ Public dataset (auto-updated weekly)
+│   ├── fact_libya_yearly_metrics.csv  ← Public dataset (auto-updated weekly)
 │   └── README.md
 │
 ├── 📂 docs/
@@ -295,7 +270,7 @@ cd .. && python -m ingestion.export_to_csv   # Export
 ## ◈ Roadmap
 
 - [x] World Bank ingestion pipeline
-- [x] BigQuery 3-layer architecture (raw → staging → mart)
+- [x] BigQuery 3-layer architecture (raw to staging to mart)
 - [x] dbt transformation with full documentation
 - [x] 13 automated data quality tests
 - [x] GitHub Actions weekly automation
@@ -312,7 +287,7 @@ cd .. && python -m ingestion.export_to_csv   # Export
 
 Released under **[Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE)** — free to use, share, and adapt for any purpose with attribution.
 
-Underlying data © [World Bank Open Data](https://data.worldbank.org) · [UNHCR](https://www.unhcr.org/refugee-statistics) — both CC BY 4.0.
+Underlying data from [World Bank Open Data](https://data.worldbank.org) and [UNHCR](https://www.unhcr.org/refugee-statistics) — both CC BY 4.0.
 
 See [`DISCLAIMER.md`](DISCLAIMER.md) for full source notes.
 
@@ -324,6 +299,6 @@ See [`DISCLAIMER.md`](DISCLAIMER.md) for full source notes.
 
 *Built to make data about Libya accessible — open, clean, and always up to date.*
 
-**[⭐ Star this repo](https://github.com/ahmedmajid22/libya-open-data-platform) · [📥 Download the data](data/fact_libya_yearly_metrics.csv) · [📊 Open the dashboard](https://datastudio.google.com/reporting/ca23d690-a8b4-4506-8a39-f980855fd765)**
+**[Star this repo](https://github.com/ahmedmajid22/libya-open-data-platform) · [Download the data](data/fact_libya_yearly_metrics.csv) · [Open the dashboard](https://datastudio.google.com/reporting/ca23d690-a8b4-4506-8a39-f980855fd765)**
 
 </div>
