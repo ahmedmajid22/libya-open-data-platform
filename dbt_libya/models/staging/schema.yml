@@ -16,8 +16,9 @@ models:
           - not_null
           - unique
           - dbt_utils.accepted_range:
-              min_value: 2000
-              max_value: 2023
+              arguments:
+                min_value: 2000
+                max_value: 2023
 
       - name: country_code
         description: ISO country code
