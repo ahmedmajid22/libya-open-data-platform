@@ -305,4 +305,10 @@ See [`DISCLAIMER.md`](DISCLAIMER.md) for full source notes.
 
 **[Star this repo](https://github.com/ahmedmajid22/libya-open-data-platform) · [Download the data](data/fact_libya_yearly_metrics.csv) · [Open the dashboard](https://datastudio.google.com/reporting/ca23d690-a8b4-4506-8a39-f980855fd765)**
 
+
+
+
+
+
+
 </div>
